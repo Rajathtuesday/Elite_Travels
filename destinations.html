@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinations | Elite International Travels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="demo-banner" id="demoBanner">
+  <strong>Demo Preview.</strong> These are sample destinations only. Share your destinations spreadsheet and this page will be rebuilt from that list.
+  <button onclick="document.getElementById('demoBanner').style.display='none'" aria-label="Dismiss">×</button>
+</div>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="assets/logo.png" alt="Elite International Travels" onerror="this.style.display='none'; document.getElementById('fallbackMark').style.display='flex';">
+      <span class="fallback-mark" id="fallbackMark" style="display:none;"><i class="bi bi-compass"></i></span>
+      <span class="logo-text">Elite International Travels</span>
+    </a>
+    <button class="navtoggle" aria-label="Menu"><i class="bi bi-list"></i></button>
+    <div class="navlinks">
+      <a href="about.html">About</a>
+      <a href="destinations.html" class="current">Destinations</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="btn-enquire">Contact Us / Book Now</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Where To Next</div>
+    <h1>Destinations</h1>
+    <p>A sample layout, ready to be filled with your full destinations list.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="dest-filter">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="domestic">Domestic</button>
+      <button data-filter="international">International</button>
+    </div>
+
+    <div class="dest-group" data-group="international">
+    <div class="section-head" style="margin-bottom:20px; text-align:left; max-width:none;">
+      <h2 style="font-size:1.4rem;">International</h2>
+    </div>
+    <div class="dest-grid">
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-switzerland/600/800" alt="Switzerland">
+        <div class="dest-overlay"><span class="tag">International</span><h3>Switzerland</h3><span>Alpine escapes and scenic rail</span></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-maldives/600/800" alt="Maldives">
+        <div class="dest-overlay"><span class="tag">International</span><h3>Maldives</h3><span>Overwater villas and reef diving</span></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-dubai/600/800" alt="Dubai">
+        <div class="dest-overlay"><span class="tag">International</span><h3>Dubai</h3><span>Skyline luxury and desert escapes</span></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-bali/600/800" alt="Bali">
+        <div class="dest-overlay"><span class="tag">International</span><h3>Bali</h3><span>Temples, rice terraces and retreats</span></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-santorini/600/800" alt="Santorini">
+        <div class="dest-overlay"><span class="tag">International</span><h3>Santorini</h3><span>Caldera views and island hopping</span></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-thailand/600/800" alt="Thailand">
+        <div class="dest-overlay"><span class="tag">International</span><h3>Thailand</h3><span>Islands, temples and street food</span></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-europe/600/800" alt="Europe Tour">
+        <div class="dest-overlay"><span class="tag">International</span><h3>Europe Multi-Country</h3><span>Classic city and countryside tours</span></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-singapore/600/800" alt="Singapore">
+        <div class="dest-overlay"><span class="tag">International</span><h3>Singapore</h3><span>City breaks and family holidays</span></div>
+      </div>
+    </div>
+    </div>
+
+    <div class="dest-group" data-group="domestic" style="margin-top:52px;">
+    <div class="section-head" style="margin-bottom:20px; text-align:left; max-width:none;">
+      <h2 style="font-size:1.4rem;">Domestic</h2>
+    </div>
+    <div class="dest-grid">
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-kerala/600/800" alt="Kerala">
+        <div class="dest-overlay"><span class="tag">Domestic</span><h3>Kerala</h3><span>Backwaters and hill stations</span></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-goa/600/800" alt="Goa">
+        <div class="dest-overlay"><span class="tag">Domestic</span><h3>Goa</h3><span>Beaches and coastal getaways</span></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-rajasthan/600/800" alt="Rajasthan">
+        <div class="dest-overlay"><span class="tag">Domestic</span><h3>Rajasthan</h3><span>Palaces, forts and desert safaris</span></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-kashmir/600/800" alt="Kashmir">
+        <div class="dest-overlay"><span class="tag">Domestic</span><h3>Kashmir</h3><span>Valleys, lakes and houseboats</span></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-andaman/600/800" alt="Andaman Islands">
+        <div class="dest-overlay"><span class="tag">Domestic</span><h3>Andaman Islands</h3><span>Beaches, diving and island hopping</span></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://picsum.photos/seed/eit-himachal/600/800" alt="Himachal Pradesh">
+        <div class="dest-overlay"><span class="tag">Domestic</span><h3>Himachal Pradesh</h3><span>Mountains, valleys and hill towns</span></div>
+      </div>
+    </div>
+    </div>
+
+    <p style="text-align:center; margin-top:40px; color:var(--muted); font-size:.85rem;">This is a sample list. Send over your destinations spreadsheet and we will replace this with your full, real catalogue.</p>
+  </div>
+</section>
+
+<section class="enquiry">
+  <div class="container">
+    <div class="eyebrow">See Something You Like</div>
+    <h2>Let's Build Your Itinerary</h2>
+    <div class="hero-cta" style="justify-content:center; margin-top:24px;">
+      <a href="contact.html" class="btn-primary" style="display:inline-block; background:var(--green); color:#fff;">Contact Us / Book Now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="assets/logo.png" alt="Elite International Travels" style="height:40px;" onerror="this.style.display='none';">
+          <span class="logo-text">Elite International Travels</span>
+        </a>
+        <p>Bespoke domestic and international travel planning, handled personally from first enquiry to the trip home.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <a href="about.html">About</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="services.html">Tour Packages</a>
+        <a href="services.html">Visa Services</a>
+        <a href="services.html">Air Ticketing</a>
+        <a href="services.html">Hotel Booking</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="tel:#">[Phone number]</a>
+        <a href="mailto:#">[Email address]</a>
+        <a href="#">[Office address]</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Elite International Travels. All rights reserved.</span>
+      <span>Demo layout. Privacy Policy, Terms, [legal entity details]</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.querySelectorAll('.dest-filter button').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.dest-filter button').forEach(function (b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var filter = btn.dataset.filter;
+    document.querySelectorAll('.dest-group').forEach(function (group) {
+      group.style.display = (filter === 'all' || group.dataset.group === filter) ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -6,7 +6,7 @@
 html{scroll-behavior:smooth; font-size:17px;}
 body{
   font-family:'Outfit',sans-serif; color:var(--ink); background:#fff; line-height:1.7;
-  -webkit-font-smoothing:antialiased;
+  -webkit-font-smoothing:antialiased; padding-bottom:64px;
 }
 h1,h2,h3,.serif{ font-family:'DM Serif Display',serif; font-weight:400; }
 img{max-width:100%; display:block;}
@@ -246,6 +246,19 @@ footer{ background:var(--blue-dark); color:rgba(255,255,255,.72); padding:44px 0
 .footer-col a:hover{ color:#fff; }
 .footer-bottom{ display:flex; flex-direction:column; gap:8px; padding-top:20px; font-size:.72rem; color:rgba(255,255,255,.45); }
 
+/* ---------- sticky call / whatsapp bar (mobile only) ---------- */
+.sticky-bar{
+  position:fixed; bottom:0; left:0; right:0; display:flex; z-index:150;
+  box-shadow:0 -2px 12px rgba(0,0,0,.08);
+}
+.sticky-bar a{
+  flex:1; display:flex; align-items:center; justify-content:center; gap:8px;
+  padding:15px; font-size:.82rem; font-weight:600; color:#fff;
+}
+.sticky-bar a i{ font-size:1rem; }
+.sticky-call{ background:var(--blue-dark); }
+.sticky-wa{ background:#25d366; }
+
 /* ================= TABLET (600px+) ================= */
 @media (min-width: 600px){
   .nav-phone-text{ display:inline; }
@@ -319,4 +332,7 @@ footer{ background:var(--blue-dark); color:rgba(255,255,255,.72); padding:44px 0
   footer{ padding:64px 0 28px; }
   .footer-grid{ grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; padding-bottom:44px; }
   .footer-bottom{ flex-direction:row; justify-content:space-between; align-items:center; }
+
+  body{ padding-bottom:0; }
+  .sticky-bar{ display:none; }
 }

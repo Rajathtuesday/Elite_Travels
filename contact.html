@@ -12,7 +12,7 @@
 <body>
 
 <div class="demo-banner" id="demoBanner">
-  <strong>Demo Preview.</strong> The form below is not yet connected. Contact details are placeholders to be replaced with your real information.
+  <strong>Demo Preview.</strong> The form below is wired up and ready — it just needs a real Web3Forms access key swapped in before it can actually deliver enquiries. Office address and hours are still placeholders.
   <button onclick="document.getElementById('demoBanner').style.display='none'" aria-label="Dismiss">×</button>
 </div>
 
@@ -24,7 +24,7 @@
       <span class="logo-text">Elite International Travels</span>
     </a>
     <div class="nav-right">
-      <a href="tel:#" class="nav-phone" aria-label="Call us"><i class="bi bi-telephone-fill"></i><span class="nav-phone-text">[Phone number]</span></a>
+      <a href="tel:+919845008148" class="nav-phone" aria-label="Call us"><i class="bi bi-telephone-fill"></i><span class="nav-phone-text">+91 98450 08148</span></a>
       <button class="navtoggle" aria-label="Menu"><i class="bi bi-list"></i></button>
     </div>
     <div class="navlinks">
@@ -54,15 +54,15 @@
 
         <div class="contact-row">
           <div class="icon-ring"><i class="bi bi-telephone"></i></div>
-          <div><strong>Phone</strong><span>[Add phone number]</span></div>
+          <div><strong>Phone</strong><span><a href="tel:+919845008148">+91 98450 08148</a></span></div>
         </div>
         <div class="contact-row">
           <div class="icon-ring"><i class="bi bi-whatsapp"></i></div>
-          <div><strong>WhatsApp</strong><span>[Add WhatsApp number]</span></div>
+          <div><strong>WhatsApp</strong><span><a href="https://wa.me/919845008148" target="_blank">+91 98450 08148</a></span></div>
         </div>
         <div class="contact-row">
           <div class="icon-ring"><i class="bi bi-envelope"></i></div>
-          <div><strong>Email</strong><span>[Add email address]</span></div>
+          <div><strong>Email</strong><span><a href="mailto:info@elitetravels.in">info@elitetravels.in</a></span></div>
         </div>
         <div class="contact-row">
           <div class="icon-ring"><i class="bi bi-geo-alt"></i></div>
@@ -76,60 +76,42 @@
         <div class="map-box">[Map placeholder, embed real office location here]</div>
       </div>
 
-      <div class="contact-form">
+      <form class="contact-form" id="enquiryForm">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New enquiry from elitetravels.in">
         <div class="form-row">
           <div class="form-field">
             <label>Full Name</label>
-            <input type="text" placeholder="Your name">
+            <input type="text" name="name" placeholder="Your name" required>
           </div>
           <div class="form-field">
             <label>Phone Number</label>
-            <input type="tel" placeholder="Your phone number">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-field">
-            <label>Email</label>
-            <input type="email" placeholder="Your email">
-          </div>
-          <div class="form-field">
-            <label>Destination of Interest</label>
-            <input type="text" placeholder="e.g. Switzerland, Kerala">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-field">
-            <label>Travel Dates</label>
-            <input type="text" placeholder="Approximate dates or month">
-          </div>
-          <div class="form-field">
-            <label>Number of Travellers</label>
-            <input type="number" placeholder="e.g. 2" min="1">
+            <input type="tel" name="phone" placeholder="Your phone number" required>
           </div>
         </div>
         <div class="form-row full">
           <div class="form-field">
             <label>Service Needed</label>
-            <select>
-              <option>Customized Tour Package</option>
-              <option>Group Tour</option>
+            <select name="service">
               <option>Air Ticketing</option>
+              <option>Domestic Tour</option>
+              <option>International Tour</option>
               <option>Visa Services</option>
-              <option>Passport Assistance</option>
               <option>Travel Insurance</option>
-              <option>Hotel Booking</option>
+              <option>Passport Services</option>
               <option>Not Sure Yet</option>
             </select>
           </div>
         </div>
         <div class="form-row full">
           <div class="form-field">
-            <label>Message</label>
-            <textarea rows="4" placeholder="Tell us a bit more about the trip you have in mind"></textarea>
+            <label>Message <span style="text-transform:none; letter-spacing:0; color:var(--muted);">(optional)</span></label>
+            <textarea rows="4" name="message" placeholder="Tell us a bit more about the trip you have in mind"></textarea>
           </div>
         </div>
-        <button class="btn-primary" type="button" style="width:100%; border:none; cursor:pointer;" onclick="alert('Demo form. Connect this to a real enquiry endpoint before launch.')">Submit Enquiry</button>
-      </div>
+        <button class="btn-primary" type="submit" style="width:100%; border:none; cursor:pointer;">Submit Enquiry</button>
+        <div id="formStatus" class="form-status"></div>
+      </form>
 
     </div>
   </div>
@@ -147,7 +129,7 @@
         <div class="social-row">
           <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://wa.me/919845008148" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-col">
@@ -159,15 +141,16 @@
       </div>
       <div class="footer-col">
         <h5>Services</h5>
-        <a href="services.html">Tour Packages</a>
-        <a href="services.html">Visa Services</a>
         <a href="services.html">Air Ticketing</a>
-        <a href="services.html">Hotel Booking</a>
+        <a href="services.html">Domestic &amp; International Tour</a>
+        <a href="services.html">Visa Services</a>
+        <a href="services.html">Travel Insurance</a>
+        <a href="services.html">Passport Services</a>
       </div>
       <div class="footer-col">
         <h5>Contact</h5>
-        <a href="tel:#">[Phone number]</a>
-        <a href="mailto:#">[Email address]</a>
+        <a href="tel:+919845008148">+91 98450 08148</a>
+        <a href="mailto:info@elitetravels.in">info@elitetravels.in</a>
         <a href="#">[Office address]</a>
       </div>
     </div>
@@ -179,8 +162,8 @@
 </footer>
 
 <div class="sticky-bar">
-  <a href="tel:#" class="sticky-call"><i class="bi bi-telephone-fill"></i> Call Us</a>
-  <a href="#" class="sticky-wa"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+  <a href="tel:+919845008148" class="sticky-call"><i class="bi bi-telephone-fill"></i> Call Us</a>
+  <a href="https://wa.me/919845008148" target="_blank" class="sticky-wa"><i class="bi bi-whatsapp"></i> WhatsApp</a>
 </div>
 
 <script src="script.js"></script>

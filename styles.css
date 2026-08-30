@@ -314,13 +314,13 @@ footer{ background:var(--blue-dark); color:rgba(255,255,255,.72); padding:44px 0
 
   .value-grid{ grid-template-columns:repeat(4,1fr); padding:34px 24px; }
   .why-grid{ grid-template-columns:repeat(4,1fr); gap:30px; }
-  .why-grid.svc-6{ grid-template-columns:repeat(3,1fr); }
+  .why-grid.svc-7{ grid-template-columns:repeat(4,1fr); }
   .dest-grid{ grid-template-columns:repeat(4,1fr); gap:22px; }
   .dest-grid-compact{ grid-template-columns:repeat(2,1fr); max-width:760px; margin:0 auto; }
   .dest-card{ aspect-ratio:3/4; }
   .dest-card img{ transition:transform .6s ease; }
   .dest-card:hover img{ transform:scale(1.08); }
-  .svc-grid{ grid-template-columns:repeat(3,1fr); gap:26px; }
+  .svc-grid{ grid-template-columns:repeat(4,1fr); gap:26px; }
   .svc-card{ padding:32px 26px; transition:.2s; }
   .svc-card:hover{ box-shadow:0 8px 24px rgba(0,0,0,.05); }
   .testi-grid{ grid-template-columns:repeat(3,1fr); gap:32px; }
